@@ -37,10 +37,10 @@ resource "aws_api_gateway_rest_api" "default" {
 }
 
 
-resource "aws_api_gateway_rest_api_policy" "test" {
-  rest_api_id = join("", aws_api_gateway_rest_api.default.*.id)
-  policy      = var.api_policy
-}
+# resource "aws_api_gateway_rest_api_policy" "test" {
+#   rest_api_id = join("", aws_api_gateway_rest_api.default.*.id)
+#   policy      = var.api_policy
+# }
 
 # Module      : Api Gateway Resource
 # Description : Terraform module to create Api Gateway resource on AWS.
