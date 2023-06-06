@@ -31,7 +31,7 @@ resource "aws_api_gateway_rest_api" "default" {
 
   endpoint_configuration {
     types            = var.types
-    vpc_endpoint_ids = length(var.vpc_endpoint_ids) > 0 && var.vpc_endpoint_ids[0] != "" ? var.vpc_endpoint_ids : null
+    # vpc_endpoint_ids = length(var.vpc_endpoint_ids) > 0 && var.vpc_endpoint_ids[0] != "" ? var.vpc_endpoint_ids : null
   }
   tags   = var.tags
 }
